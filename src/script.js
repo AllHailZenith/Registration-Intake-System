@@ -1,21 +1,21 @@
-
-function validateName(name) {
-    const nameRegex = /^[a-zA-Z ]{2,}$/;
-    return nameRegex.test(name);
+function validatePhone(phone) {
+    const phoneRegex = /^\d{3}[-.]?\d{3}[-.]?\d{4}$/;
+    return phoneRegex.test(phone);
 }
 
-function validateUsername(username) {
-    const usernameRegex = /^\w{3,12}$/;
-    return usernameRegex.test(username);
+function validatePromoCode(promo) {
+    const promoRegex = /^SUMMER$/i;
+    return promoRegex.test(promo || "");
 }
 
+console.log("\n=== Phase 2 Tests ===");
 
-console.log("=== Phase 1 Tests ===");
+console.log(validatePhone("555-234-5678"));
+console.log(validatePhone("555.345.6789"));
+console.log(validatePhone("5554567890"));
+console.log(validatePhone("555-678-901"));
 
-console.log(validateName("Alex Johnson"));
-console.log(validateName("B"));
-console.log(validateName("Dana Scully"));
-
-console.log(validateUsername("alex_j"));
-console.log(validateUsername("da"));
-console.log(validateUsername("cool_user_123"));
+console.log(validatePromoCode("SUMMER"));
+console.log(validatePromoCode("summer"));
+console.log(validatePromoCode("SUMMER2026"));
+console.log(validatePromoCode(""));
