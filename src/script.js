@@ -76,3 +76,44 @@ console.log("\n=== Phase 4 Registration Results ===");
 for (const user of sampleUsers) {
     console.log(processRegistration(user));
 }
+
+
+const edgeCaseUsers = [
+    {
+        name: "Grace Hopper",
+        username: "grace@hopper",
+        phone: "555-123-4567",
+        promoCode: "SUMMER"
+    },
+    {
+        name: "Henry Ford",
+        username: "henry_f",
+        phone: "555 123 4567",
+        promoCode: "summer"
+    },
+    {
+        name: "Isabella Stone",
+        username: "isabella12",
+        phone: "555123456789",
+        promoCode: ""
+    },
+    {
+        name: "Jack Miller",
+        username: "jack_m",
+        phone: "555.222.3333",
+        promoCode: "Summer"
+    }
+];
+
+console.log("\n=== Phase 5 Edge Case Tests ===");
+
+for (const user of edgeCaseUsers) {
+    console.log(processRegistration(user));
+}
+
+// Username boundary tests
+console.log("\n=== Username Boundary Tests ===");
+
+console.log(validateUsername("abc"));          // true
+console.log(validateUsername("abcdefghijkl")); // true
+console.log(validateUsername("abcdefghijklm"));// false

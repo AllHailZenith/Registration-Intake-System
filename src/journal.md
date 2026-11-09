@@ -9,3 +9,6 @@ I created a function that reformats valid phone numbers into a standard format. 
 
 Phase 4
 I created the processRegistration() function to bring all the validation steps together. It checks each required field and stores any errors in an array. If the information is valid, it returns the user's data with a formatted phone number and indicates whether the promo discount was applied. Building the smaller functions first made the final pipeline easier to organize and test.
+
+Phase 5
+During testing, I found that usernames with special characters and phone numbers with spaces or extra digits were rejected correctly. I also tested the minimum and maximum username lengths to make sure the boundaries worked. This assignment helped me understand how regular expressions can validate, extract, and reformat information without needing several complicated string checks.
